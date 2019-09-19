@@ -1,0 +1,17 @@
+<% include header.ejs %>
+    <div class='box' id='heading'>
+        <h1><%= title %></h1>
+    </div>
+    <div class="box">
+        <% for (let task of tasks) { %>
+        <div class="item">
+            <input type="checkbox" name="" id="">
+            <p><%=task%></p>
+        </div>  
+        <% } %>
+        <form action="/" method="post" class='item'>
+            <input type="text" name='task' placeholder="New Task" autofocus>
+            <button type="submit" name="button" value="<%=title%>">+</button>
+        </form>
+    </div>
+<%- include footer.ejs -%>
